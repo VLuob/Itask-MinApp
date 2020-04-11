@@ -1,0 +1,19 @@
+<!--pages/login/login.wxml-->
+<image src="/images/login.jpg" class="img" />
+<view class="bg">
+  <text>请授权获取手机号</text>
+  <view style="display:flex; justify-content:space-around;position:absolute;bottom:50rpx;">
+    <button style="width:260rpx;background:#eee;margin-right:60rpx;" bindtap="closeChange">取消</button>
+    <button open-type="getUserInfo" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" class="login" style="width:260rpx;">允许</button>
+  </view>
+</view>
+
+
+<view class="bg" wx:if="{{open}}">
+  <text>为了获得更好的互动体验 </text>
+  <text>请允许微信获取您的昵称和头像</text>
+  <view style="display:flex; justify-content:space-around;position:absolute;bottom:50rpx;">
+    <button style="width:260rpx;background:#eee;margin-right:60rpx;" bindtap="closeChange">取消</button>
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="login" style="width:260rpx;">允许</button>
+  </view>
+</view>

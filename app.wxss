@@ -1,0 +1,433 @@
+/**app.wxss**/
+
+/* 头部 */
+
+page {
+  background: #f6f6f6;
+  font-size: PingFang-SC-Medium;
+  font-weight: Medium;
+  height: 100%;
+  width: 100%;
+}
+
+.head {
+  height: 100rpx;
+  width: 100%;
+  background: #dc4c41;
+  position: relative;
+}
+
+.head .title {
+  font: 34rpx "";
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 35rpx;
+}
+
+.head image {
+  height: 34rpx;
+  width: 18rpx;
+  position: absolute;
+  bottom: 35rpx;
+  left: 34rpx;
+}
+
+/* 任务列表 */
+
+.tasklist {
+  height: 202.1rpx;
+  width: 100%;
+  background: #fff;
+  margin: 20rpx 0;
+  position: relative;
+  box-shadow: 0 0 8rpx rgba(0, 0, 0, 0.1);
+}
+
+.tasklist .tasklist_icon {
+  width: 138rpx;
+  height: 138rpx;
+  border-radius: 10rpx;
+  position: absolute;
+  left: 23rpx;
+  top: 31rpx;
+}
+
+.tasklist .tasklist_txt {
+  position: absolute;
+  left: 183rpx;
+  top: 30rpx;
+}
+
+.tasklist .tasklist_txt text {
+  font: 30rpx "";
+  color: #333;
+  font-weight: Medium;
+}
+
+.tasklist  .tasklist_txt .center {
+  display: flex;
+  margin: 20rpx 0;
+}
+
+.tasklist  .tasklist_txt .center .headic {
+  height: 32rpx;
+  width: 28rpx;
+}
+
+.tasklist  .tasklist_txt .center .txt {
+  height: 30rpx;
+  width: 70rpx;
+  background: #ebebeb;
+  border-radius: 6rpx;
+  font: 18rpx/30rpx '';
+  color: #333;
+  text-align: center;
+  margin-left: 15rpx;
+  overflow: hidden;
+}
+
+.tasklist .tasklist_txt view {
+  height: 30rpx;
+  width: 97rpx;
+  border-radius: 6rpx;
+  font: 18rpx/30rpx "";
+  color: #fff;
+  text-align: center;
+}
+
+.tasklist .tasklist_time {
+  height: 38rpx;
+  width: 134rpx;
+  background: #efeeee;
+  position: absolute;
+  right: 70rpx;
+  bottom: 1rpx;
+  border-radius: 6rpx 6rpx 0 0;
+  font: 20rpx/38rpx "";
+  color: #333;
+  font-weight: Regular;
+  text-align: center;
+}
+
+.tasklist .tasklist_nexticon {
+  height: 24rpx;
+  width: 13rpx;
+  position: absolute;
+  top: 54rpx;
+  right: 33rpx;
+}
+
+/* 选项-筛选-发布流程-未完成流程 */
+
+.option {
+  height: 144rpx;
+  width: 100%;
+  display: flex;
+  margin-bottom: 8rpx;
+}
+
+.option .option_box {
+  width: 798rpx;
+  background: #fff;
+  box-shadow: 0 0 8rpx rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.option .option_left {
+  height: 101rpx;
+  width: 38rpx;
+  background: #efeeee;
+  margin: auto 0;
+  margin-left: 13rpx;
+  box-shadow: 0 0 8rpx rgba(0, 0, 0, 0.16);
+  position: relative;
+}
+
+.option .option_left::after {
+  content: "";
+  width: 38rpx;
+  height: 3rpx;
+  background: #dbdbdb;
+  position: absolute;
+  top: 17rpx;
+}
+
+.option .option_left::before {
+  content: "";
+  width: 38rpx;
+  height: 3rpx;
+  background: #dbdbdb;
+  position: absolute;
+  top: 25rpx;
+}
+
+.option .option_box .select1 {
+  height: 33rpx;
+  width: 33rpx;
+  position: absolute;
+  left: 29rpx;
+  top: 56rpx;
+}
+
+.option .option_box .prd {
+  position: absolute;
+  left: 92rpx;
+}
+
+.option .option_box .prd .txt {
+  font: 28rpx "";
+  color: #999;
+  margin-top: 30rpx;
+}
+
+.option .option_box .prd .txt1 {
+  font: 28rpx "";
+  color: #333;
+  margin-top: 30rpx;
+}
+
+.option .option_box .prd .people {
+  display: flex;
+  margin-top: 20rpx;
+}
+
+.option .option_box .prd .people .icon {
+  height: 32rpx;
+  width: 28rpx;
+  margin-right: 15rpx;
+}
+
+.option .option_box .prd .people .name {
+  height: 30rpx;
+  width: 70rpx;
+  background: #ebebeb;
+  border-radius: 6rpx;
+  font: 18rpx/30rpx "";
+  color: #999;
+  text-align: center;
+  margin-top: 3rpx;
+  overflow: hidden;
+}
+
+.option .option_box .prd .people .name1 {
+  height: 30rpx;
+  width: 70rpx;
+  background: #ebebeb;
+  border-radius: 6rpx;
+  font: 18rpx/30rpx "";
+  color: #333;
+  text-align: center;
+  margin-top: 3rpx;
+  overflow: hidden;
+}
+
+.option .option_box .enclosure {
+  height: 30rpx;
+  width: 28rpx;
+  position: absolute;
+  right: 156rpx;
+  top: 43rpx;
+}
+
+.option .option_box .edit {
+  height: 30rpx;
+  width: 26rpx;
+  position: absolute;
+  right: 100rpx;
+  top: 43rpx;
+}
+
+.option .option_box .time {
+  height: 38rpx;
+  width: 134rpx;
+  background: #efeeee;
+  position: absolute;
+  right: 70rpx;
+  bottom: 1rpx;
+  border-radius: 6rpx 6rpx 0 0;
+  font: 20rpx/38rpx "";
+  color: #999;
+  font-weight: Regular;
+  text-align: center;
+}
+
+.option .option_box .time1 {
+  height: 38rpx;
+  width: 134rpx;
+  background: #efeeee;
+  position: absolute;
+  right: 70rpx;
+  bottom: 1rpx;
+  border-radius: 6rpx 6rpx 0 0;
+  font: 20rpx/38rpx "";
+  color: #333;
+  font-weight: Regular;
+  text-align: center;
+}
+
+.option .option_box.box1 {
+  width: 665rpx;
+  background: #fff;
+  box-shadow: 0 0 8rpx rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.option .option_left.left1 {
+  height: 101rpx;
+  width: 38rpx;
+  background: #e1e1e1;
+  margin: auto 0;
+  margin-left: 49rpx;
+  box-shadow: 0 0 8rpx rgba(0, 0, 0, 0.16);
+  position: relative;
+}
+
+.option .option_left.left1::after {
+  background: #f6f6f6;
+}
+
+.option .option_left.left1::before {
+  background: #f6f6f6;
+}
+
+.option .option_left.left1 .line {
+  content: "";
+  width: 38rpx;
+  height: 3rpx;
+  background: #f6f6f6;
+  position: absolute;
+  top: 33rpx;
+}
+
+/* 背景遮罩 */
+
+.mask {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: #000;
+  opacity: 0.5;
+  z-index: 99999;
+}
+
+.modelwindow {
+  width: 590rpx;
+  height: 376rpx;
+  background: #fff;
+  position: absolute;
+  border-radius: 20rpx;
+  top: 435rpx;
+  left: 80rpx;
+  z-index: 9999999999;
+  display: flex;
+  flex-direction: column;
+}
+
+.modelwindow .txt {
+  font: 28rpx "";
+  color: #333;
+  margin-top: 59rpx;
+  text-align: center;
+}
+
+.modelwindow  input {
+  height: 70rpx;
+  width: 354rpx;
+  background: #f6f6f6;
+  text-align: center;
+  font: 24rpx/70rpx "";
+  color: #999;
+  margin: 30rpx auto 40rpx;
+}
+
+.modelwindow .btn {
+  height: 60rpx;
+  width: 160rpx;
+  background: #dc4c41;
+  font: 24rpx "";
+  color: #fff;
+}
+
+/* 邀请码 */
+
+.addmodel {
+  width: 590rpx;
+  height: 376rpx;
+  background: #fff;
+  position: absolute;
+  border-radius: 20rpx;
+  top: 435rpx;
+  left: 80rpx;
+  z-index: 9999999999;
+  display: flex;
+  flex-direction: column;
+}
+
+.addmodel .text {
+  text-align: center;
+  margin: 30rpx 0 20rpx;
+}
+
+.addmodel .addmodel_project {
+  display: flex;
+  background: #f6f6f6;
+  align-items: center;
+  height: 160rpx;
+  width: 500rpx;
+  margin: 0 auto;
+  border-radius: 10rpx;
+}
+
+.addmodel .addmodel_project .addmodel_project_img {
+  height: 115rpx;
+  width: 115rpx;
+  margin: 0 30rpx 0 50rpx;
+  border-radius: 10rpx;
+}
+
+.addmodel .addmodel_project .addmodel_project_box {
+  display: flex;
+  flex-direction: column;
+}
+
+.addmodel .addmodel_project .addmodel_project_box .txt {
+  font: 28rpx/2 "";
+  color: #333;
+}
+
+.addmodel .addmodel_project .addmodel_project_box .label {
+  height: 30rpx;
+  border-radius: 6rpx;
+  font: 20rpx/30rpx "";
+  color: #333;
+  margin-top: 21rpx;
+}
+
+.addmodel .btn {
+  display: flex;
+  margin: 30rpx auto 0;
+}
+
+.addmodel .btn view {
+  border-radius: 8rpx;
+  height: 60rpx;
+  width: 160rpx;
+  text-align: center;
+  font: 28rpx/60rpx "";
+}
+
+.addmodel .btn view:nth-child(1) {
+  color: #fff;
+  background: #dc4c41;
+  margin-right: 60rpx;
+}
+
+.addmodel .btn view:nth-child(2) {
+  border: 2rpx solid #dc4c41;
+  color: #dc4c41;
+}

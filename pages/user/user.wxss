@@ -1,0 +1,53 @@
+/* pages/user/user.wxss */
+
+::-webkit-scrollbar {
+
+  display:none;
+  width:0;
+  height:0;
+  color:transparent;
+}
+.userBox_usericon {
+  height: 158rpx;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  position: relative;
+  margin-bottom: 11rpx;
+}
+
+text {
+  font: 28rpx "";
+  color: #333;
+  margin-left: 70rpx;
+}
+
+.icon {
+  height: 126rpx;
+  width: 126rpx;
+  border-radius: 20rpx;
+  position: absolute;
+  right: 83rpx;
+}
+
+.in {
+  height: 24rpx;
+  width: 14rpx;
+  position: absolute;
+  right: 32rpx;
+}
+
+.userBox_usernp {
+  height: 119rpx;
+  background: #fff;
+  border: 1rpx solid #ebebeb;
+  display: flex;
+  align-items: center;
+}
+
+.num {
+  position: absolute;
+  right: 83rpx;
+  font: 26rpx "";
+  color: #666;
+}

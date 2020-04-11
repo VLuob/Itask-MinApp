@@ -1,0 +1,84 @@
+<!--index.wxml-->
+<view class="head" style="height:100rpx;padding-top:{{th}}rpx;">
+  <view class="title">iTask</view>
+  <image src="/images/logo.png" class="logo" />
+</view>
+<view class="search">
+  <image class="search_img" src="/images/search.png" />
+  <input placeholder="搜索" class="search_ipt" />
+  <image class="search_add" src="/images/add1.png" bindtap="showChange" />
+  <view class="model" wx:if="{{showModel}}">
+    <image src="/images/model.png" class="model_icon" />
+    <view class="box">
+      <view class="box_task" bindtap="getScancodeChange">
+        <image src="{{task[0].img}}" class="box_task_icon" />
+        <text class="box_task_txt">{{task[0].name}}</text>
+      </view>
+      <view class="line" style="position:absolute;top:150rpx;"></view>
+      <view class="box_task" bindtap="newtaskChange">
+        <image src="{{task[2].img}}" class="box_task_icon" />
+        <text class="box_task_txt">{{task[2].name}}</text>
+      </view>
+      <view class="line" style="position:absolute;top:220rpx;"></view>
+      <view class="box_task" bindtap="openChange">
+        <image src="{{task[1].img}}" class="box_task_icon" />
+        <text class="box_task_txt">{{task[1].name}}</text>
+      </view>
+      <view class="line"></view>
+      <view class="box_task" bindtap="addChange">
+        <image src="{{task[3].img}}" class="box_task_icon" />
+        <text class="box_task_txt">{{task[3].name}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<block wx:for="{{name}}" wx:key="index">
+  <view class="listcard" data-item="{{item}}" bindtap="touchChange">
+    <image src="{{name[index].img}}" />
+    <text>{{name[index].title}}</text>
+  </view>
+</block>
+<view class="today">
+  <text class="today_txt">今天</text>
+  <text class="today_time">{{M}}月{{D}}日</text>
+</view>
+<scroll-view scroll-y="true" style="height:{{h-290}}rpx;" wx:if="{{wx.getstorageSync('id') !==''}}">
+  <block wx:for="{{records}}" wx:key="index">
+    <view class="project" bindtap="next" data-records="{{item}}" bindtap="touchChange1">
+      <image src="{{records[index].titleImg}}" class="img" />
+      <image src="/images/new.png" class="new" />
+      <view class="project_title">{{records[index].title}}</view>
+      <view class="center">
+        <image src="/images/headicon.png" class="headic" />
+        <view class="txt">{{records[index].createrName}}</view>
+      </view>
+      <view class="project_box">
+        <view class="project_box_label" style="background:#{{records[index].labelColor}}">{{records[index].label}}</view>
+        <text class="project_box_time">{{records[index].createDate}}</text>
+      </view>
+    </view>
+  </block>
+</scroll-view>
+<view class="mask" wx:if="{{showModal}}" bindtap="closewindow"></view>
+<view class="modelwindow" wx:if="{{modal}}">
+  <form bindsubmit='okChange'>
+    <view class="txt">填写邀请码查找任务</view>
+    <input placeholder="填写8位邀请码" name="invitationcode" />
+    <button form-type='submit' class="btn">确定</button>
+  </form>
+</view>
+<!-- 邀请码开关 -->
+<view class="addmodel " wx:if="{{addmodal}}">
+  <view class="text">确定加入此任务吗？</view>
+  <view class="addmodel_project">
+    <image class="addmodel_project_img" src="{{data.titleImg}}" />
+    <view class="addmodel_project_box">
+      <view class="txt">{{data.title}}</view>
+      <view class="label">创建人：{{data.participantName}}</view>
+    </view>
+  </view>
+  <view class="btn">
+    <view bindtap="joinChange">加入</view>
+    <view bindtap="closeChange">取消</view>
+  </view>
+</view>

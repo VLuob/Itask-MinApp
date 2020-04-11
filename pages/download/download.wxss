@@ -1,0 +1,52 @@
+/* pages/download/download.wxss */
+
+.client {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top:300rpx;
+}
+
+.client .client_download {
+  height: 76rpx;
+  width: 328rpx;
+  margin-top: 417rpx;
+}
+
+.client .box {
+  height: 60rpx;
+  width: 292rpx;
+  border-radius: 6rpx;
+  font: 24rpx/60rpx "";
+  text-align: center;
+}
+
+.client .img {
+  height: 34rpx;
+  width: 30rpx;
+  position: absolute;
+  top: 15rpx;
+  left: 30rpx;
+}
+
+.client .client_and text {
+  color: #fff;
+  margin-left: 40rpx;
+}
+
+.client .client_ios {
+  border: 2rpx solid #dc4c41;
+  position: relative;
+  margin: 38rpx 0;
+}
+
+.client .client_ios text {
+  color: #dc4c41;
+  margin-left: 40rpx;
+}
+
+.client .client_open {
+  border: 2rpx solid #dc4c41;
+  color: #dc4c41;
+  font: 22rpx/60rpx "";
+}

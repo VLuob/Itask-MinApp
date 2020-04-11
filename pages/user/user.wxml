@@ -1,0 +1,29 @@
+<!--pages/user/user.wxml-->
+<view class="head" style="height:100rpx;padding-top:{{th}}rpx;">
+  <view class="title">我的</view>
+</view>
+<view class="userBox">
+  <view class="userBox_usericon">
+    <text>头像</text>
+    <image class="icon" src="{{userinfo.avatar}}" />
+    <image class="in" src="/images/in.png" />
+  </view>
+  <view class="userBox_usernp">
+    <text>昵称</text>
+    <text class="num">{{userinfo.name}}</text>
+    <image class="in" src="/images/in.png" />
+    <view style="height:80rpx;width:80rpx;position:absolute;right:32rpx;"> </view>
+  </view>
+  <view class="userBox_usernp" style="border:none">
+    <text>手机号</text>
+    <text class="num">{{userinfo.mobile}}</text>
+    <image class="in" src="/images/in.png" />
+  </view>
+  <view class="userBox_usernp" style="margin:9rpx 0;border:none">
+    <text>性别</text>
+    <text class="num">{{gender}}</text>
+    <image class="in" src="/images/in.png" />
+    <view style="height:80rpx;width:80rpx;position:absolute;right:32rpx;"> </view>
+  </view>
+  <view class="userBox_usernp" style="justify-content:center;font:28rpx '';color:#333;" bindtap="logoutChange">退出账号</view>
+</view>

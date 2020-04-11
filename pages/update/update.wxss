@@ -1,0 +1,280 @@
+/* pages/update/update.wxss */
+
+.model {
+  height: 400rpx;
+  width: 600rpx;
+  background: #f6f6f6;
+  position: absolute;
+  z-index: 999999999999999;
+  top: 40%;
+  left: 70rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 0 18rpx rgba(125, 125, 125, 0.2);
+}
+.model .people{
+  height:70rpx;
+  background:#dc4c41;
+  font:24rpx/70rpx "";
+  text-align: center;
+  color:#fff;
+}
+.model .list{
+  height:70rpx;
+  width:550rpx;
+  margin: 20rpx auto;
+  background:#fff;
+ line-height: 70rpx;
+  color:#333;
+  padding-left: 50rpx;
+  box-sizing: border-box;
+}
+.delete-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.taskbox {
+  height: 534rpx;
+  width: 700rpx;
+  margin: 19rpx auto 12rpx;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  padding-left: 51rpx;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+  box-shadow: 0 0 8rpx rgba(125, 125, 125, 0.2);
+}
+
+.taskbox text {
+  font: 28rpx/2 "";
+  color: #333;
+}
+
+.time {
+  display: flex;
+  position: relative;
+}
+
+.time .picker {
+  height: 50rpx;
+  width: 212rpx;
+  background: #f6f6f6;
+  border-radius: 6rpx;
+  font: 24rpx/50rpx "";
+  color: #666;
+  padding-left: 24rpx;
+  box-sizing: border-box;
+  margin: 4rpx 0 0 14rpx;
+  position: relative;
+}
+
+.time .picker .calendar {
+  height: 26rpx;
+  width: 26rpx;
+  position: absolute;
+  right: 15rpx;
+  top: 11rpx;
+}
+
+.taskbox input {
+  height: 50rpx;
+  width: 600rpx;
+  background: #f6f6f6;
+  font: 24rpx "";
+  color: #666;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}
+
+.taskbox .img {
+  height: 110rpx;
+  width: 110rpx;
+  margin-top: 31rpx;
+  position: relative;
+}
+
+.taskchilds {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12rpx;
+}
+
+.taskchilds .left {
+  height: 110rpx;
+  width: 38rpx;
+  background: #efeeee;
+  box-shadow: 0 0 8rpx rgba(0, 0, 0, 0.16);
+  border-radius: 6rpx 0 0 6rpx;
+  position: relative;
+}
+
+.taskchilds .left::after {
+  content: "";
+  position: absolute;
+  height: 3rpx;
+  width: 100%;
+  background: #dbdbdb;
+  top: 18rpx;
+}
+
+.taskchilds .left::before {
+  content: "";
+  position: absolute;
+  height: 3rpx;
+  width: 100%;
+  background: #dbdbdb;
+  top: 26rpx;
+}
+
+.taskchilds .childsbox {
+  height: 350rpx;
+  width: 662rpx;
+  background: #fff;
+  box-shadow: 0 0 8rpx rgba(125, 125, 125, 0.2);
+  padding: 20rpx 0 0 41rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.taskchilds .childsbox text {
+  font: 28rpx/2 "";
+  color: #333;
+}
+
+.taskchilds .childsbox input {
+  width: 571rpx;
+  height: 50rpx;
+  background: #f6f6f6;
+  font: 24rpx "";
+  color: #666;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}
+
+.taskchilds .childsbox image {
+  height: 26rpx;
+  width: 26rpx;
+  padding-top: 18rpx;
+}
+
+.taskchilds .childsbox .delimg {
+  position: absolute;
+  right: 51rpx;
+}
+
+.taskchilds .childsbox .addimg {
+  position: absolute;
+  right: 111rpx;
+}
+
+.taskchildren {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10rpx;
+}
+
+.taskchildren .left {
+  height: 110rpx;
+  width: 38rpx;
+  background: #e1e1e1;
+  box-shadow: 0 0 8rpx rgba(0, 0, 0, 0.16);
+  border-radius: 6rpx 0 0 6rpx;
+  position: relative;
+  margin-left: 35rpx;
+}
+
+.taskchildren .left::after {
+  content: "";
+  position: absolute;
+  height: 3rpx;
+  width: 100%;
+  background: #f6f6f6;
+  top: 18rpx;
+}
+
+.taskchildren .left::before {
+  content: "";
+  position: absolute;
+  height: 3rpx;
+  width: 100%;
+  background: #f6f6f6;
+  top: 26rpx;
+}
+
+.taskchildren .left .line {
+  position: absolute;
+  height: 3rpx;
+  width: 100%;
+  background: #f6f6f6;
+  top: 36rpx;
+}
+
+.taskchildren .childrenbox {
+  height: 370rpx;
+  width: 624rpx;
+  background: #fff;
+  box-shadow: 0 0 8rpx rgba(125, 125, 125, 0.2);
+  padding: 31rpx 0 0 41rpx;
+  box-sizing: border-box;
+}
+
+.taskchildren .childrenbox text {
+  font: 28rpx/2 "";
+  color: #333;
+}
+
+.taskchildren .childrenbox input {
+  width: 574rpx;
+  height: 50rpx;
+  background: #f6f6f6;
+  font: 24rpx "";
+  color: #666;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}
+
+.ipt {
+  width: 574rpx;
+  height: 50rpx;
+  background: #f6f6f6;
+  font: 24rpx "";
+  color: #666;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}
+
+.taskchildren .childrenbox image {
+  height: 26rpx;
+  width: 26rpx;
+  padding-top: 18rpx;
+}
+
+.taskchildren .childrenbox .delimg {
+  position: absolute;
+  right: 51rpx;
+}
+
+.taskchildren .childrenbox .addimg {
+  position: absolute;
+  right: 111rpx;
+}
+
+.button {
+  height: 70rpx;
+  background: #dc4c41;
+  border-radius: 10rpx;
+  font: 24rpx/2 "";
+  color: #fff;
+  text-align: center;
+  margin: 80rpx 0 30rpx;
+}
+
+.newadd {
+  height: 40rpx;
+  width: 40rpx;
+  position: absolute;
+  right: 50rpx;
+  margin-top: 20rpx;
+}

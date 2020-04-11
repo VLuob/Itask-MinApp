@@ -1,0 +1,17 @@
+<view class="head" style="height:120rpx;padding-top:60rpx;">
+  <view class="title">iTask客户端</view>
+ <view style="height:100rpx;width:100rpx;" bindtap="back">
+  <image src="/images/goback.png" />
+  </view>
+</view>
+<view class="client">
+  <view class="client_ios box">
+    <image src="/images/android.png" class="img" />
+    <text>支持Android用户</text>
+  </view>
+  <view class="client_ios box">
+    <image src="/images/ios.png" class="img" />
+    <text>支持iPhone用户</text> </view>
+    <view>App Store搜索 iTasks下载</view>
+        <view>下载iTasks APP体验完整版功能</view>
+</view>

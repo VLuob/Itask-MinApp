@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/update/update",
+    "pages/newtask/newtask",
+    "pages/tasklist/tasklist",
+    "pages/project/project",
+    "pages/user/user",
+    "pages/complete/complete",
+    "pages/download/download",
+    "pages/release/release",
+    "pages/uncomplete/uncomplete",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "custom",
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "custom": true,
+    "list": [
+      {
+        "selectedIconPath": "images/tasktab.png",
+        "iconPath": "images/untasktab.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/usertab.png",
+        "iconPath": "images/unusertab.png",
+        "pagePath": "pages/user/user",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

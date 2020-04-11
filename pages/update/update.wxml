@@ -1,0 +1,88 @@
+<!--pages/update/update.wxml-->
+<view class="head" style="height:100rpx;padding-top:{{th}}rpx;">
+  <view class="title">编辑任务</view>
+  <view style="height:100rpx;width:100rpx;" bindtap="back">
+    <image src="/images/goback.png" />
+  </view>
+</view>
+<scroll-view scroll-y="true" style="height:{{h*1.4}}rpx;" id="page" scroll-top="{{scrollTop}}">
+  <view class="taskbox">
+    <text style="margin-top:30rpx;">任务名称</text>
+    <input style="margin:0 0 21rpx;" value="{{data.title}}" name="taskname" bindinput="titleFChange" />
+    <text>标签名称</text>
+    <input value="{{data.label}}" name="labelname" bindinput="labelFChange" />
+    <view wx:if="{{imgs}}" wx:for="{{imgs}}" wx:for-item="item" wx:key="*this">
+      <image class='img' src="{{item}}" data-index="{{index}}" mode="aspectFill">
+        <icon type='cancel' class="delete-btn" data-index="{{index}}" catchtap="deleteImg"></icon>
+      </image>
+    </view>
+    <image class="img" src="{{img}}" bindtap="chooseImg" wx:if="{{show}}" />
+    <text style="font:20rpx '';margin:20rpx 0 10rpx 20rpx;">封面图</text>
+    <view class="time">
+      <text>预计完成时间</text>
+      <picker mode="date" start="2019-09-01" end="2030-09-01" bindchange="timeChange">
+        <view class="picker">
+          {{data.createDate||'年-月-日'}}
+          <image src="/images/calendar.png" class="calendar" />
+        </view>
+      </picker>
+    </view>
+  </view>
+  <block wx:for="{{data.childs}}" wx:key='index' data-item="{{item}}">
+    <view class="taskchilds">
+      <view class="left"></view>
+      <view class="childsbox">
+        <text>任务名称</text>
+        <text style="margin-left:30rpx;">-{{index+1}}</text>
+        <image class="addimg" src="/images/addimg.png" bindtap="addChildchange" data-index="{{index}}" />
+        <image class="delimg" src="/images/delimg.png" bindtap="delChange" data-index="{{index}}" data-item="{{item}}" />
+        <input style="margin:0 0 21rpx;" placeholder=" 任务名称" bindinput="titleChange1" data-index='{{index}}' value="{{item.title}}" />
+        <text>负责人</text>
+        <picker bindchange="nameChange" range="{{childrenname}}" data-index="{{index}}" data-childindex="{{index2}}" data-item="{{item}}" bindtap='people'>
+          <view class="ipt" style="line-height:50rpx;">
+            {{item.participantName || "负责人"}}
+          </view>
+        </picker>
+        <view class="time" style="margin-top:20rpx;">
+          <text>预计完成时间</text>
+          <picker mode="date" start="2019-09-01" end="2030-09-01" bindchange="timechildChange" data-index="{{index}}">
+            <view class="picker">
+              {{item.createDate||'年-月-日'}}
+              <image src="/images/calendar.png" class="calendar" style="position:absolute;top:-6rpx;" />
+            </view>
+          </picker>
+        </view>
+      </view>
+    </view>
+    <block wx:for="{{data.childs[index].childs}}" wx:key='index2' data-item="{{item}}" wx:for-index="index2">
+      <view class="taskchildren">
+        <view class="left">
+          <view class="line"></view>
+        </view>
+        <view class="childrenbox">
+          <text>任务名称</text>
+          <text style="margin-left:30rpx;">-{{index+1}}.{{index2+1}}</text>
+          <image class="delimg" src="/images/delimg.png" data-index="{{index}}" data-childindex="{{index2}}" bindtap="del" data-item="{{item}}" />
+          <input bindinput="titleChange" value="{{item.title}}" data-index="{{index}}" data-childindex="{{index2}}" placeholder="任务名称" />
+          <text>负责人</text>
+          <picker bindchange="namechildChange" range="{{childrenname1}}" data-index="{{index}}" data-childindex="{{index2}}" data-item="{{item}}" bindtap='people1'>
+            <view class="ipt" style="line-height:50rpx;">
+              {{item.participantName || '负责人'}}
+            </view>
+          </picker>
+          <view class="time" style="margin-top:20rpx;">
+            <text>预计完成时间</text>
+            <picker mode="date" start="2019-09-01" end="2030-09-01" bindchange="timechildrenChange" data-index="{{index}}" data-childindex="{{index2}}">
+              <view class="picker">
+                {{item.createDate||'年-月-日'}}
+                <image src="/images/calendar.png" class="calendar" style="position:absolute;top:-6rpx;" />
+              </view>
+            </picker>
+          </view>
+        </view>
+      </view>
+    </block>
+  </block>
+</scroll-view>
+<image class="newadd" src="/images/newaddimg.png" bindtap="addChange" />
+<button class="button" bindtap="taskSubChange">提交</button>

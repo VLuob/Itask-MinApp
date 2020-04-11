@@ -1,0 +1,24 @@
+<!--pages/success/success.wxml-->
+<view class="head" style="height:100rpx;padding-top:{{th}}rpx;">
+  <view class="title">已完成</view>
+  <view style="height:100rpx;width:100rpx;" bindtap="back">
+    <image src="/images/goback.png" />
+  </view>
+</view>
+<scroll-view scroll-y="true" style="height:{{h*1.6}}rpx;">
+  <block wx:for="{{records}}" wx:key="index">
+    <view class="tasklist" data-records="{{item}}" bindtap="touchChange">
+      <image src="{{records[index].titleImg}}" class="tasklist_icon" />
+      <view class="tasklist_txt">
+        <text>{{records[index].title}}</text>
+        <view class="center">
+          <image src="/images/headicon.png" class="headic" />
+          <view class="txt">{{records[index].createrName}}</view>
+        </view>
+        <view style="background:#{{records[index].labelColor}}">{{records[index].label}}</view>
+      </view>
+      <view class="tasklist_time">{{records[index].createDate}}</view>
+      <image src="/images/next.png" class="tasklist_nexticon" />
+    </view>
+  </block>
+</scroll-view>
